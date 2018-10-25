@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Calendar</string>
+    <string name="black">BLACK_THEME</string>
+    <string name="dark">DARK_THEME</string>
+    <string name="white">WHITE_THEME</string>
+    <string name="light">LIGHT_THEME</string>
 </resources>

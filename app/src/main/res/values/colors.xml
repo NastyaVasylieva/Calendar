@@ -2,5 +2,58 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">@color/newStatusBar</color>
+    <color name="transparent">#00000000</color>
+    <color name="indicator_past">#78909c</color>
+    <color name="indicator_present">#00E676</color>
+    <color name="indicator_future">#039BE5</color>
+    <color name="onboard_card_white">#aaffffff</color>
+
+
+    <color name="lightBlueHeader">#3f51b5</color>
+    <color name="lightBlueBackground">#dcf2ff</color>
+
+    <color name="newHeader">#1a2931</color>
+    <color name="newNavDrawerBackground">#263238</color>
+    <color name="newFabColor">#cbf4f3</color>
+    <color name="newBackground">#283d48</color>
+    <color name="newStatusBar">#142026</color>
+    <color name="newCard">#39505c</color>
+    <color name="newNavHeaderBackground">#0e5d62</color>
+    <color name="newProgressWheelRimColor">#326e73</color>
+    <color name="newProgressWheelBarColor">#00beb3</color>
+
+    <color name="newLightHeader">#00695C</color>
+    <color name="newLightNavDrawerBackground">#D6EDE9</color>
+    <color name="newLightFabColor">#00695C</color>
+    <color name="newLightBackground">#E0F2F1</color>
+    <color name="newLightStatusBar">#004D40</color>
+    <color name="newLightCard">#bbdefb</color>
+    <color name="newLightNavHeaderBackground">#6fc9b8</color>
+    <color name="newLightProgressWheelRimColor">#4DB6AC</color>
+    <color name="newLightProgressWheelBarColor">#00695c</color>
+
+    <color name="blackHeader">#111</color>
+    <color name="blackNavDrawerBackground">#000</color>
+    <color name="blackFabColor">#cbf4f3</color>
+    <color name="blackBackground">#000</color>
+    <color name="blackStatusBar">#181818</color>
+    <color name="blackCard">#212121</color>
+    <color name="blackNavHeaderBackground">#000</color>
+    <color name="blackProgressWheelRimColor">#EF5350</color>
+    <color name="blackProgressWheelBarColor">#B71C1C</color>
+
+    <color name="whiteHeader">#0288D1</color>
+    <color name="whiteNavDrawerBackground">#fff</color>
+    <color name="whiteFabColor">#01579B</color>
+    <color name="whiteBackground">#fff</color>
+    <color name="whiteStatusBar">#0277BD</color>
+    <color name="whiteCard">#eee</color>
+    <color name="whiteNavHeaderBackground">#039BE5</color>
+    <color name="whiteProgressWheelRimColor">#0D47A1</color>
+    <color name="whiteProgressWheelBarColor">#1976D2</color>
+
+    <color name="active">#388E3C</color>
+    <color name="inactive">#F44336</color>
+
 </resources>
