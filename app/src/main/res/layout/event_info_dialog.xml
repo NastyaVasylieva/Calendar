@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_height="320dp" android:layout_width="310dp"
+        tools:context=".View.InfoDialog">
+
+    <TextView
+            android:text="Notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+            android:id="@+id/textView16" android:textSize="18sp" android:layout_marginTop="196dp"/>
+    <TextView
+            android:text="Repeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+            android:id="@+id/textView15" android:textSize="18sp" android:layout_marginTop="164dp"/>
+    <ImageView
+            android:layout_width="80dp"
+            android:layout_height="79dp" tools:srcCompat="@tools:sample/backgrounds/scenic"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp" android:id="@+id/imageView3" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"/>
+    <TextView
+            android:text="Name"
+            android:layout_width="55dp"
+            android:layout_height="28dp"
+            android:id="@+id/name_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="18sp" android:layout_marginTop="16dp" android:layout_marginStart="108dp"/>
+    <TextView
+            android:text="Info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/info_view" android:textSize="18sp" android:layout_marginTop="56dp"
+            android:layout_marginStart="108dp"/>
+    <TextView
+            android:text="Start:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/textView13" android:textSize="18sp" android:layout_marginTop="100dp"/>
+    <TextView
+            android:text="End:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+            android:id="@+id/textView14" android:textSize="18sp" android:layout_marginTop="132dp"/>
+    <ImageButton
+            android:src="@drawable/ic_delete_black_24dp"
+            android:layout_width="68dp"
+            android:layout_height="65dp"
+            android:id="@+id/deleteButton" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="16dp" android:layout_marginTop="256dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.444"/>
+    <ImageButton
+            android:src="@drawable/ic_mode_edit_24dp"
+            android:layout_width="65dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="65dp"
+            android:id="@+id/editButton" android:layout_marginTop="256dp" android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.444" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/cancelButton"
+            app:layout_constraintStart_toEndOf="@+id/deleteButton"/>
+    <ImageButton
+            android:src="@drawable/ic_date_range_24dp"
+            android:layout_width="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="65dp"
+            android:id="@+id/cancelButton" android:layout_marginTop="256dp" android:layout_marginStart="232dp"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.444"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="wrap_content" android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent" android:id="@+id/start_view" android:textSize="18sp"
+            android:layout_marginTop="100dp" app:layout_constraintHorizontal_bias="0.99"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="wrap_content" android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/end_view" android:textSize="18sp" android:layout_marginTop="132dp"
+            app:layout_constraintHorizontal_bias="0.99"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="wrap_content" android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent" android:id="@+id/repeat_view" android:textSize="18sp"
+            android:layout_marginTop="164dp" app:layout_constraintHorizontal_bias="1.0"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="wrap_content" android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent" android:id="@+id/notification_view" android:textSize="18sp"
+            android:layout_marginTop="196dp" app:layout_constraintHorizontal_bias="0.99"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

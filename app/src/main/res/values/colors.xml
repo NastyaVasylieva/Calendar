@@ -2,7 +2,8 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">@color/newStatusBar</color>
+    <color name="colorAccent">#3F51B5</color>
+
     <color name="transparent">#00000000</color>
     <color name="indicator_past">#78909c</color>
     <color name="indicator_present">#00E676</color>
@@ -55,5 +56,16 @@
 
     <color name="active">#388E3C</color>
     <color name="inactive">#F44336</color>
+
+    //color picker
+    <color name="color1">#82B926</color>
+    <color name="color2">#a276eb</color>
+    <color name="color3">#6a3ab2</color>
+    <color name="color4">#666666</color>
+    <color name="color5">#FFFF00</color>
+    <color name="color6">#3C8D2F</color>
+    <color name="color7">#FA9F00</color>
+    <color name="color8">#FF0000</color>
+
 
 </resources>

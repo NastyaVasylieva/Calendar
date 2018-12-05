@@ -5,9 +5,9 @@ import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.preference.PreferenceManager;
-import android.support.v4.content.ContextCompat;
+import androidx.core.content.ContextCompat;
 
-import com.nastya.calendar.MainActivity;
+import com.nastya.calendar.View.MainActivity;
 import com.nastya.calendar.R;
 
 import java.util.ArrayList;

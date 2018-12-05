@@ -4,4 +4,26 @@
     <string name="white">WHITE_THEME</string>
     <string name="light">LIGHT_THEME</string>
     <string name="dark">DARK_THEME</string>
+    <string name="title_activity_login">Sign in</string>
+
+
+    <string name="no_events_message">No events or tasks</string>
+    <string name="default_event_message">Your events will be displayed here</string>
+    <string name="title">Title</string>
+    <string name="date">Date</string>
+    <string name="notification">Notification</string>
+    <string name="info">Info</string>
+    <string name="all_day">All day</string>
+    <string name="color">Color</string>
+    <string name="icon">Icon</string>
+
+    <string-array name="repeat_event">
+        <item>Never</item>
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+        <item>Yearly</item>
+    </string-array>
+    <string name="frequency">Choose a frequency</string>
+
 </resources>

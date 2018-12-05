@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/menu_month"
+            android:orderInCategory="100"
+            android:title="Month" />
+    <item
+            android:id="@+id/menu_week"
+            android:orderInCategory="100"
+            android:title="Week" />
+    <item
+            android:id="@+id/menu_day"
+            android:orderInCategory="100"
+            android:title="Day" />
+</menu>
