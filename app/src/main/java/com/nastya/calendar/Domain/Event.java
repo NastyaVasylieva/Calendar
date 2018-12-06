@@ -26,6 +26,20 @@ public class Event {
         this.eventIcon = eventIcon;
         this.isEnabledNotifications = isEnabledNotifications;
     }
+    public Event(long id, String eventName,
+                 String eventInfo, long eventStart,
+                 long eventFinish,
+                 String eventColor, String eventIcon,
+                 boolean isEnabledNotifications) {
+        this.eventId = id;
+        this.eventName = eventName;
+        this.eventInfo = eventInfo;
+        this.eventStart = eventStart;
+        this.eventFinish = eventFinish;
+        this.eventColor = eventColor;
+        this.eventIcon = eventIcon;
+        this.isEnabledNotifications = isEnabledNotifications;
+    }
 
     private long eventId;
     private String eventName;
@@ -65,6 +79,10 @@ public class Event {
 
     public long getEventFinish() {
         return eventFinish;
+    }
+
+    public void setEventId(long eventId) {
+        this.eventId = eventId;
     }
 
     @Override

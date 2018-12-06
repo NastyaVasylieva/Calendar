@@ -30,6 +30,6 @@ public interface IEventDBHelper {
     /*
     / deleting current event
     */
-    public void deleteEvent(Event event);
+    public void deleteEvent(long id);
 
 }

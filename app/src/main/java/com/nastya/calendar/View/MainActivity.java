@@ -4,19 +4,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
-import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.FragmentManager;
 import com.applandeo.materialcalendarview.CalendarView;
 import com.applandeo.materialcalendarview.EventDay;
 import com.applandeo.materialcalendarview.listeners.OnDayClickListener;
@@ -27,6 +24,7 @@ import com.nastya.calendar.R;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
@@ -40,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     TextView textView;
 
     ArrayList<Event> eventArrayList;
+    List<EventDay> eventDayList;
     EventsAdapter adapter;
 
 
@@ -55,6 +54,12 @@ public class MainActivity extends AppCompatActivity {
         listView = findViewById(R.id.list_view);
 
         textView.setText(R.string.default_event_message);
+
+       /* EventDBHelper dbHelper = new EventDBHelper(MainActivity.this, calendarView.getCurrentPageDate().getTimeInMillis());
+        List<Event> monthEvents = new ArrayList<>();
+        monthEvents=dbHelper.readAllEvents();
+        eventDayList.addAll(monthEvents);
+        calendarView.setEvents(eventDayList);*/
 
 
         toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
@@ -107,16 +112,20 @@ public class MainActivity extends AppCompatActivity {
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, AddActivity.class);
-                intent.putExtra("event_date", clickedDayCalendar.getTimeInMillis()+"");
-                startActivity(intent);
+                if(clickedDayCalendar!=null){
+                    Intent intent = new Intent(MainActivity.this, AddActivity.class);
+                    intent.putExtra("event_date", clickedDayCalendar.getTimeInMillis()+"");
+                    intent.putExtra("mode", "add");
+
+                    startActivity(intent);
+                }
+
 
             }
         });
 
         MainActivity.forceLocale(this);
         resources = MainActivity.getLocalizedResources(this);
-
     }
 
     public static void forceLocale(Context context) {
@@ -160,7 +169,6 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
-
 
 }
 

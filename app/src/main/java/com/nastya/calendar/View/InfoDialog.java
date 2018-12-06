@@ -1,10 +1,12 @@
 package com.nastya.calendar.View;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
@@ -16,18 +18,18 @@ import java.util.Calendar;
 
 public class InfoDialog extends DialogFragment {
 
-    TextView name;
-    TextView info;
-    TextView start;
-    TextView end;
-    TextView repeat;
-    TextView isNotification;
+    private TextView name;
+    private TextView info;
+    private TextView start;
+    private TextView end;
+    private TextView repeat;
+    private TextView isNotification;
 
-    ImageButton delete;
-    ImageButton edit;
-    ImageButton cancel;
+    private ImageView delete;
+    private ImageView edit;
+    private ImageView cancel;
 
-    long id;
+    private long id;
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -59,7 +61,6 @@ public class InfoDialog extends DialogFragment {
         info.setText(getArguments().getString("info"));
         start.setText(startTime.get(startTime.DAY_OF_MONTH)+"/"+(startTime.get(startTime.MONTH)+1)+"/"+startTime.get(startTime.YEAR));
         end.setText(endTime.get(endTime.DAY_OF_MONTH)+"/"+(endTime.get(endTime.MONTH)+1)+"/"+endTime.get(endTime.YEAR));
-        // repeat.setText(getArguments().getString("repeat"));
         if(getArguments().getBoolean("notification")==true){
             isNotification.setText("on");
         }else {
@@ -67,10 +68,31 @@ public class InfoDialog extends DialogFragment {
         }
 
         id=getArguments().getLong("id");
+        repeat.setText(id+"");
+
+        System.out.print(id);
 
         delete.setOnClickListener(view -> {
             EventDBHelper dbHelper = new EventDBHelper(InfoDialog.super.getContext(), startTime.getTimeInMillis());
-            dbHelper.deleteEvent(dbHelper.getEvent(id));
+            dbHelper.deleteEvent(id);
+            getDialog().dismiss();
+            Intent intent = new Intent(InfoDialog.super.getContext(), MainActivity.class);
+            startActivity(intent);
+
+
+        });
+
+        cancel.setOnClickListener(view ->{
+            getDialog().dismiss();
+        });
+
+        edit.setOnClickListener(view ->{
+            Intent intent = new Intent(InfoDialog.super.getContext(), AddActivity.class);
+            intent.putExtra("id", id);
+            intent.putExtra("mode", "edit");
+            intent.putExtra("event_date", startTime.getTimeInMillis()+"");
+
+            startActivity(intent);
         });
 
         return builder.create();

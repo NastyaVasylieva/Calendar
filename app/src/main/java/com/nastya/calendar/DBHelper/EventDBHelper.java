@@ -62,7 +62,7 @@ public class EventDBHelper extends SQLiteOpenHelper implements IEventDBHelper{
         SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor cursor = db.query(EventTable.TABLE_NAME,
-                new String[]{EventTable.COLUMN_NAME,
+                new String[]{EventTable.COLUMN_ID, EventTable.COLUMN_NAME,
                         EventTable.COLUMN_INFO, EventTable.COLUMN_START,
                         EventTable.COLUMN_END,
                         EventTable.COLUMN_COLOR, EventTable.COLUMN_ICON,
@@ -75,6 +75,7 @@ public class EventDBHelper extends SQLiteOpenHelper implements IEventDBHelper{
         }
 
         Event event = new Event(
+                cursor.getLong(cursor.getColumnIndex(EventTable.COLUMN_ID)),
                 cursor.getString(cursor.getColumnIndex(EventTable.COLUMN_NAME)),
                 cursor.getString(cursor.getColumnIndex(EventTable.COLUMN_INFO)),
                 cursor.getLong(cursor.getColumnIndex(EventTable.COLUMN_START)),
@@ -102,6 +103,7 @@ public class EventDBHelper extends SQLiteOpenHelper implements IEventDBHelper{
             do {
 
                 Event event = new Event(
+                        cursor.getLong(cursor.getColumnIndex(EventTable.COLUMN_ID)),
                         cursor.getString(cursor.getColumnIndex(EventTable.COLUMN_NAME)),
                         cursor.getString(cursor.getColumnIndex(EventTable.COLUMN_INFO)),
                         cursor.getLong(cursor.getColumnIndex(EventTable.COLUMN_START)),
@@ -130,6 +132,7 @@ public class EventDBHelper extends SQLiteOpenHelper implements IEventDBHelper{
             do {
 
                 Event event = new Event(
+                        cursor.getLong(cursor.getColumnIndex(EventTable.COLUMN_ID)),
                         cursor.getString(cursor.getColumnIndex(EventTable.COLUMN_NAME)),
                         cursor.getString(cursor.getColumnIndex(EventTable.COLUMN_INFO)),
                         cursor.getLong(cursor.getColumnIndex(EventTable.COLUMN_START)),
@@ -166,10 +169,10 @@ public class EventDBHelper extends SQLiteOpenHelper implements IEventDBHelper{
                 new String[]{String.valueOf(event.getEventId())});
     }
 
-    public void deleteEvent(Event event) {
+    public void deleteEvent(long id) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(EventTable.TABLE_NAME, EventTable.COLUMN_ID + " = ?",
-                new String[]{String.valueOf(event.getEventId())});
+                new String[]{String.valueOf(id)});
         db.close();
     }
 }
